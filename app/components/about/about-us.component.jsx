@@ -40,7 +40,7 @@ const AboutUs = () => {
           <div className=" sm:z-20 w-full">
               <Image
                 src={AboutBg}
-                className="h-40 w-52 sm:h-52 sm:w-60 lg:w-auto lg:h-auto md:left-9 lg:left-0 relative z-30 right-1 xl:w-auto xl:h-auto object-contain "
+                className="h-40 w-52 sm:h-52 sm:w-60 lg:w-auto lg:h-auto left-4 md:left-9 lg:left-0 relative z-30 right-1 xl:w-auto xl:h-auto object-contain "
                 alt=""
               />
           </div>
@@ -54,7 +54,7 @@ const AboutUs = () => {
           
           <Image
             src={badge}
-            className="lg:w-auto lg:h-auto w-16 h-16 z-40 absolute right-14 sm:-right-14 lg:-right-28 xl:-right-14 object-contain "
+            className="lg:w-auto lg:h-auto w-16 h-16 z-40 absolute right-14 sm:-right-14 lg:-right-32 xl:-right-14 object-contain "
             alt="Sticker"
           />
           </div>
