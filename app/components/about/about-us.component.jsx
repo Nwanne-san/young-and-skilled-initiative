@@ -36,29 +36,32 @@ const AboutUs = () => {
             </div>
           </ul>
         </div>
-        <div className="w-full sm:w-1/2 lg:w-full h-full relative -top-10 sm:-top-0 flex">
+        <div className="w-full sm:w-1/2 lg:w-full h-full relative  -top-10 sm:-top-0 flex">
           <div className=" sm:z-20 w-full">
               <Image
                 src={AboutBg}
-                className="h-40 w-52 sm:h-52 sm:w-60 lg:w-auto lg:h-auto z-30 right-1 xl:w-auto xl:h-auto object-contain "
+                className="h-40 w-52 sm:h-52 sm:w-60 lg:w-auto lg:h-auto md:left-9 lg:left-0 relative z-30 right-1 xl:w-auto xl:h-auto object-contain "
                 alt=""
               />
           </div>
 
-          <Image
-            src={stickBadge}
-            className="lg:w-auto lg:h-auto h-40 w-56 sm:h-52 sm:w-60 z-4 absolute right-14 sm:-right-20 xl:-right-6 top-10 object-contain "
-            alt="Sticker"
-          />
+          <div className="">
+            <Image
+              src={stickBadge}
+              className="lg:w-auto lg:h-auto h-40 w-56 sm:h-52 sm:w-60 md:w-96 z-4 absolute right-14 sm:-right-24 xl:-right-6 top-10 object-contain "
+              alt="Sticker"
+            />
+          
           <Image
             src={badge}
             className="lg:w-auto lg:h-auto w-16 h-16 z-40 absolute right-14 sm:-right-14 lg:-right-28 xl:-right-14 object-contain "
             alt="Sticker"
           />
+          </div>
           <div className="absolute -bottom-28 right-14 sm:-right-12 xl:right-1 z-50">
               <Image
                 src={img2}
-                className="h-40 w-52 sm:h-52 sm:w-60 lg:w-auto lg:h-auto object-contain"
+                className="h-40 w-52 sm:h-52 sm:w-60 lg:w-auto lg:hauto object-contain"
                 alt=""
               />
             </div>
