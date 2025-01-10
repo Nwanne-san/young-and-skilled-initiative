@@ -48,7 +48,7 @@ const AboutUs = () => {
           <div className="">
             <Image
               src={stickBadge}
-              className="lg:w-auto lg:h-auto h-40 w-56 sm:h-52 sm:w-60 md:w-96 z-4 absolute right-14 sm:-right-24 xl:-right-6 top-10 object-contain "
+              className="lg:w-auto lg:h-auto h-40 w-56 sm:h-52 sm:w-60 md:w-96 z-4 absolute right-8 sm:-right-24 xl:-right-6 top-10 object-contain "
               alt="Sticker"
             />
           
