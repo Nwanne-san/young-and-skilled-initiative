@@ -5,6 +5,8 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import badge from "@/public/Logosticker.svg";
 import { stickBadge } from "@/public/icons";
+import Link from "next/link";
+
 const AboutUs = () => {
   return (
     <>
@@ -38,11 +40,11 @@ const AboutUs = () => {
         </div>
         <div className="w-full sm:w-1/2 lg:w-full h-full relative  -top-10 sm:-top-0 flex">
           <div className=" sm:z-20 w-full">
-              <Image
-                src={AboutBg}
-                className="h-40 w-52 sm:h-52 sm:w-60 lg:w-auto lg:h-auto left-4 md:left-9 lg:left-0 relative z-30 right-1 xl:w-auto xl:h-auto object-contain "
-                alt=""
-              />
+            <Image
+              src={AboutBg}
+              className="h-40 w-52 sm:h-52 sm:w-60 lg:w-auto lg:h-auto left-4 md:left-9 lg:left-0 relative z-30 right-1 xl:w-auto xl:h-auto object-contain "
+              alt=""
+            />
           </div>
 
           <div className="">
@@ -51,20 +53,20 @@ const AboutUs = () => {
               className="lg:w-auto lg:h-auto h-40 w-56 sm:h-52 sm:w-60 md:w-96 z-4 absolute right-8 sm:-right-24 xl:-right-6 top-10 object-contain "
               alt="Sticker"
             />
-          
-          <Image
-            src={badge}
-            className="lg:w-auto lg:h-auto w-16 h-16 z-40 absolute right-14 sm:-right-14 lg:-right-32 xl:-right-14 object-contain "
-            alt="Sticker"
-          />
+
+            <Image
+              src={badge}
+              className="lg:w-auto lg:h-auto w-16 h-16 z-40 absolute right-14 sm:-right-14 lg:-right-32 xl:-right-14 object-contain "
+              alt="Sticker"
+            />
           </div>
           <div className="absolute -bottom-28 right-14 sm:-right-12 xl:right-1 z-50">
-              <Image
-                src={img2}
-                className="h-40 w-52 sm:h-52 sm:w-60 lg:w-auto lg:hauto object-contain"
-                alt=""
-              />
-            </div>
+            <Image
+              src={img2}
+              className="h-40 w-52 sm:h-52 sm:w-60 lg:w-auto lg:hauto object-contain"
+              alt=""
+            />
+          </div>
         </div>
 
         <div className=" sm:w-1/2 lg:w-full">
@@ -87,9 +89,12 @@ const AboutUs = () => {
           </p>
 
           <div className="w-full mt-[15px] flex items-center justify-center sm:justify-start ">
-            <button className="bg-[#114F3C] sm:h-[62.97px] rounded-[44.98px] flex items-center justify-center text-sm sm:text-[17.19px] text-white py-[18.49px] px-8 sm:px-[40px] ">
-              Explore More About Us
-            </button>
+            <Link href='/aboutus'>
+              <button className="bg-[#114F3C] sm:h-[62.97px] rounded-[44.98px] flex items-center justify-center text-sm sm:text-[17.19px] text-white py-[18.49px] px-8 sm:px-[40px] ">
+                Explore More About Us
+              </button>
+            </Link>
+
             <div className=" bg-[#114F3C] w-[60px] h-14 sm:h-[60px] rounded-full flex items-center justify-center">
               <ArrowUpRight size={33.17} color={"#FFFF"} />
             </div>

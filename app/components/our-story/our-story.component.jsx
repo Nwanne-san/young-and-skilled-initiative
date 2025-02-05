@@ -82,7 +82,7 @@ const OurStory = () => {
             className="w-[33%] h-[120px] md:h-[200px] lg:h-auto lg:w-full object-cover rounded-lg shadow-lg cursor-pointer md:cursor-default"
           />
         </div>
-        <div className="h-full mt-[12px] lg:mt-0 hidden lg:block">
+        <div className="h-full mt-[12px] lg:mt-0 hidden md:block">
           <Image
             src={Story4}
             alt="Story 4"

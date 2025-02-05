@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variant } from "framer-motion";
 import Image from "next/image";
 import {
   Star1,
@@ -18,15 +18,51 @@ import { content } from "@/data";
 const POSITIONS = ["left", "center", "right"] as const;
 type Position = (typeof POSITIONS)[number];
 
+const getResponsiveXTranslation = (position: 'left' | 'center' | 'right', screenWidth: number) => {
+  if (screenWidth < 640) {
+    return position === 'center' ? "0%" : 
+           position === 'left' ? "-110%" : 
+           "110%";
+  } 
+  if (screenWidth < 768) {
+    return position === 'center' ? "0%" : 
+           position === 'left' ? "-100%" : 
+           "100%";
+  }
+  if (screenWidth < 1024) {
+    return position === 'center' ? "0%" : 
+           position === 'left' ? "-100%" : 
+           "100%";
+  }
+  if (screenWidth < 1280) {
+    return position === 'center' ? "0%" : 
+           position === 'left' ? "-100%" : 
+           "100%";
+  }
+  if (screenWidth < 3000) {
+    return position === 'center' ? "0%" : 
+           position === 'left' ? "-110%" : 
+           "110%";
+  }
+
+  return position === 'center' ? "0%" : 
+         position === 'left' ? "-100%" : 
+         "100%";
+};
+
 const AboutHero = () => {
   const [positionIndexes, setPositionIndexes] = useState([0, 1, 2]);
   const [isMobile, setIsMobile] = useState(false);
+  const [screenWidth, setScreenWidth] = useState<number>(0);
   const [[page, direction], setPage] = useState([0, 0]);
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 640);
+      const width = window.innerWidth;
+      setScreenWidth(width);
+      setIsMobile(width < 640);
     };
+    
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
@@ -64,45 +100,6 @@ const AboutHero = () => {
 
   const getPosition = (index: number): Position => {
     return POSITIONS[positionIndexes[index]];
-  };
-
-  const cardVariants = {
-    center: { 
-      x: "0%", 
-      scale: 1.05,
-      zIndex: 5,
-      transition: { 
-        type: "spring",
-        stiffness: 300,
-        damping: 30,
-        mass: 0.8,
-        duration: 0.8
-      }
-    },
-    left: { 
-      x: "-110%", 
-      scale: 0.95,
-      zIndex: 3,
-      transition: {
-        type: "spring",
-        stiffness: 300,
-        damping: 30,
-        mass: 0.8,
-        duration: 0.8
-      }
-    },
-    right: { 
-      x: "110%", 
-      scale: 0.95,
-      zIndex: 3,
-      transition: {
-        type: "spring",
-        stiffness: 300,
-        damping: 30,
-        mass: 0.8,
-        duration: 0.8
-      }
-    }
   };
 
   // Enhanced mobile variants with better transitions and positioning
@@ -166,6 +163,45 @@ const AboutHero = () => {
   // This ensures the card always exists for any page number
   const getCardContent = (pageIndex: number) => {
     return cards[wrap(pageIndex, cards.length)];
+  };
+
+  const cardVariants = {
+    center: { 
+      x: getResponsiveXTranslation('center', screenWidth),
+      scale: 1.05,
+      zIndex: 5,
+      transition: { 
+        type: "spring",
+        stiffness: 300,
+        damping: 30,
+        mass: 0.8,
+        duration: 0.8
+      }
+    },
+    left: { 
+      x: getResponsiveXTranslation('left', screenWidth),
+      scale: 0.95,
+      zIndex: 3,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 30,
+        mass: 0.8,
+        duration: 0.8
+      }
+    },
+    right: { 
+      x: getResponsiveXTranslation('right', screenWidth),
+      scale: 0.95,
+      zIndex: 3,
+      transition: {
+        type: "spring",
+        stiffness: 300,
+        damping: 30,
+        mass: 0.8,
+        duration: 0.8
+      }
+    }
   };
 
   return (
@@ -238,7 +274,7 @@ const AboutHero = () => {
                 </div>
               </motion.div>
             ) : (
-              // Desktop view remains unchanged
+              // Desktop view with responsive card variants
               cards.map((card, index) => {
                 const currentPosition = getPosition(index);
                 return (
