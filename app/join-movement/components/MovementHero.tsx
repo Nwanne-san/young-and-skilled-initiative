@@ -15,7 +15,7 @@ export const MovementHero = () => {
           />{" "}
           Join 600+ others
         </span>
-        <h1 className="text-5xl sm:text-6xl lg:text-8xl text-center font-medium font-lato sm:font-cocon">
+        <h1 className="text-5xl sm:text-6xl lg:text-8xl text-center font-cocon font-medium ">
           Join The Young and Skilled{" "}
           <span className="sm:bg-movement-gradient text-black sm:text-transparent bg-clip-text">
             Movement
@@ -26,10 +26,10 @@ export const MovementHero = () => {
           of opportunities!
         </p>
       </div>
-      <form className="flex flex-col sm:flex-row gap-[0.75em] w-full">
+      <form className="flex flex-col sm:flex-row gap-[1em] w-full ">
         <input
           type="text"
-          className="bg-white px-[1.5em] sm:px-[2em] py-[1em] text-xs sm:text-base border border-gray-300 rounded-full placeholder:text-xs sm:placeholder:text-base placeholder:font-manrope placeholder:leading-8 w-full sm:w-[30em] focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-green-500"
+          className="bg-white px-[1.5em] sm:px-[2em] py-[1em] text-xs sm:text-base border border-gray-300 rounded-full placeholder:text-xs sm:placeholder:text-base placeholder:font-manrope placeholder:leading-8 w-full sm:w-[30em] focus:outline-none focus:ring-1 focus:ring-green-500 focus:border-green-700"
           placeholder="Enter your Email"
           required
         />

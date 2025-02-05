@@ -11,9 +11,7 @@ import { LogoMain } from "@/public/images";
 const navlinks = [
   { route: "Home", link: "/", id: "home" },
   { route: "About us", link: "/aboutus", id: "about" },
-  { route: "Resources", link: "/resources", id: "resources" },
   { route: "Contact us", link: "/contact-us", id: "contact-us" },
-  { route: "Blog", link: "/blog", id: "blog" },
   { route: "Join Movement", link: "/join-movement", id: "join-movement" },
 ];
 

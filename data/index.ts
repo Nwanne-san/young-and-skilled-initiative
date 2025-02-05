@@ -26,7 +26,7 @@ export const teamMembers = [
   {
     id: 4,
     name: "Priscilla",
-    role: "Event Planning Lead",
+    role: "Event planner",
     image: "/Eventplanner.jpg",
     instagram: "https://www.instagram.com/grillzbynonny?igsh=MXdrNXNtOG05YXd2&utm_source=qr",
     linkedin: "https://www.linkedin.com/in/priscilla-ononye-08320a303?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",

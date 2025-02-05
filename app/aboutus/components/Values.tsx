@@ -1,7 +1,7 @@
 import React from "react";
 import { coreValues } from "@/data";
 import { CoreValue } from "@/types";
-import Image from "next/image"; // Import Image component from Next.js
+import Image from "next/image"; 
 
 const Values: React.FC = () => {
   return (
@@ -14,12 +14,11 @@ const Values: React.FC = () => {
             className={`relative w-full h-[215px] xl:w-[295px] xl:h-[265px] px-6 ${value.backgroundColor} ${value.padding} flex items-end justify-center text-white font-medium text-3xl xl:text-[40px] xl:leading-[48px] rounded-[10px]`}
           >
             <p>{value.title}</p>
-            {/* Replacing <img> with <Image> */}
             <Image
               src={value.sticker}
               alt="sticker"
-              width={100}   // Set the width of the sticker image
-              height={100}  // Set the height of the sticker image
+              width={100}  
+              height={100}  
               className="absolute top-[-27px] right-[-15px] w-[100px] h-[100px]"
             />
           </div>
